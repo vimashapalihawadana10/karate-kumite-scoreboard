@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    >
+
+    <!-- TIMER AREA -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.4"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtTimer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="02:00"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="24sp"
+            android:autoSizeMaxTextSize="52sp"
+            android:autoSizeStepGranularity="1sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnStart"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="START"
+                android:textStyle="bold"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="8sp"
+                android:autoSizeMaxTextSize="14sp"
+                android:padding="0dp"
+                android:backgroundTint="#6A1B9A"/>
+
+            <Button
+                android:id="@+id/btnStop"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="STOP"
+                android:textStyle="bold"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="8sp"
+                android:autoSizeMaxTextSize="14sp"
+                android:padding="0dp"
+                android:backgroundTint="#6A1B9A"/>
+
+            <Button
+                android:id="@+id/btnReset"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="RESET"
+                android:textStyle="bold"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="8sp"
+                android:autoSizeMaxTextSize="14sp"
+                android:padding="0dp"
+                android:backgroundTint="#6A1B9A"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtWinningGap"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#ED2939"
+            android:text="Winning Gap: 6"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeMaxTextSize="18sp"
+            android:autoSizeStepGranularity="1sp" />
+
+
+
+    </LinearLayout>
+
+    <!-- PLAYER AREA -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5.8"
+        android:orientation="horizontal">
+
+        <!-- AO SIDE -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="#0000FF"
+            android:padding="3dp"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.7"
+                android:gravity="center"
+                android:text="AO"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="12sp"
+                android:autoSizeMaxTextSize="22sp" />
+
+            <EditText
+                android:id="@+id/edtAoName"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.8"
+                android:hint="AO Name"
+                android:background="#FFFFFF"
+                android:textColor="#000000"
+                android:textColorHint="#777777"
+                android:padding="3dp"
+                android:singleLine="true"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="9sp"
+                android:autoSizeMaxTextSize="14sp" />
+
+            <TextView
+                android:id="@+id/txtAoScore"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.8"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="35sp"
+                android:autoSizeMaxTextSize="70sp" />
+
+            <Button
+                android:id="@+id/btnAoYuko"
+                style="@style/KumiteButton"
+                android:text="YUKO"
+                />
+
+            <Button
+                android:id="@+id/btnAoWazaari"
+                style="@style/KumiteButton"
+                android:text="WAZA-ARI" />
+
+            <Button
+                android:id="@+id/btnAoIppon"
+                style="@style/KumiteButton"
+                android:text="IPPON" />
+
+            <Button
+                android:id="@+id/btnAoMinus"
+                style="@style/KumiteButton"
+                android:text="-1" />
+
+            <Button
+                android:id="@+id/btnAoSenshu"
+                style="@style/KumiteButton"
+                android:text="SENSHU / S" />
+
+            <TextView
+                android:id="@+id/txtAoSenshu"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.7"
+                android:gravity="center"
+                android:text="S: OFF"
+                android:textColor="#FFFF00"
+                android:textStyle="bold"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMaxTextSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.8"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnAoC1"
+                    style="@style/SmallKumiteButton"
+                    android:text="1C" />
+
+                <Button
+                    android:id="@+id/btnAoC2"
+                    style="@style/SmallKumiteButton"
+                    android:text="2C" />
+
+                <Button
+                    android:id="@+id/btnAoC3"
+                    style="@style/SmallKumiteButton"
+                    android:text="3C" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.8"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnAoHC"
+                    style="@style/SmallKumiteButton"
+                    android:text="HC" />
+
+                <Button
+                    android:id="@+id/btnAoH"
+                    style="@style/SmallKumiteButton"
+                    android:text="H" />
+
+                <Button
+                    android:id="@+id/btnAoK"
+                    style="@style/SmallKumiteButton"
+                    android:text="K" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- AKA SIDE -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="#B71C1C"
+            android:padding="3dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.7"
+                android:gravity="center"
+                android:text="AKA"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="12sp"
+                android:autoSizeMaxTextSize="22sp" />
+
+            <EditText
+                android:id="@+id/edtAkaName"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.8"
+                android:hint="AKA Name"
+                android:background="#FFFFFF"
+                android:textColor="#000000"
+                android:textColorHint="#777777"
+                android:padding="3dp"
+                android:singleLine="true"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="9sp"
+                android:autoSizeMaxTextSize="14sp" />
+
+            <TextView
+                android:id="@+id/txtAkaScore"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.8"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="35sp"
+                android:autoSizeMaxTextSize="70sp" />
+
+            <Button
+                android:id="@+id/btnAkaYuko"
+                style="@style/AkaKumiteButton"
+                android:text="YUKO" />
+
+            <Button
+                android:id="@+id/btnAkaWazaari"
+                style="@style/AkaKumiteButton"
+                android:text="WAZA-ARI" />
+
+            <Button
+                android:id="@+id/btnAkaIppon"
+                style="@style/AkaKumiteButton"
+                android:text="IPPON" />
+
+            <Button
+                android:id="@+id/btnAkaMinus"
+                style="@style/AkaKumiteButton"
+                android:text="-1" />
+
+            <Button
+                android:id="@+id/btnAkaSenshu"
+                style="@style/AkaKumiteButton"
+                android:text="SENSHU / S" />
+
+            <TextView
+                android:id="@+id/txtAkaSenshu"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.7"
+                android:gravity="center"
+                android:text="S: OFF"
+                android:textColor="#FFFF00"
+                android:textStyle="bold"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMaxTextSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.8"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnAkaC1"
+                    style="@style/SmallKumiteButton"
+                    android:text="1C" />
+
+                <Button
+                    android:id="@+id/btnAkaC2"
+                    style="@style/SmallKumiteButton"
+                    android:text="2C" />
+
+                <Button
+                    android:id="@+id/btnAkaC3"
+                    style="@style/SmallKumiteButton"
+                    android:text="3C" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.8"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnAkaHC"
+                    style="@style/SmallKumiteButton"
+                    android:text="HC" />
+
+                <Button
+                    android:id="@+id/btnAkaH"
+                    style="@style/SmallKumiteButton"
+                    android:text="H" />
+
+                <Button
+                    android:id="@+id/btnAkaK"
+                    style="@style/SmallKumiteButton"
+                    android:text="K" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- BOTTOM AREA -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.7"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnSaveFight"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="SAVE"
+            android:textStyle="bold"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="9sp"
+            android:autoSizeMaxTextSize="14sp"
+            android:padding="0dp"
+            android:backgroundTint="#6A1B9A"/>
+
+    </LinearLayout>
+
+</LinearLayout>

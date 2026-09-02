@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tatami_purple"
+    android:padding="16dp">
+
+    <!-- TITLE -->
+    <TextView
+        android:id="@+id/txtShareTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="SHARE FIGHT RESULT"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- RESULT CARD -->
+    <FrameLayout
+        android:id="@+id/shareCard"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="12dp"
+        android:clipToOutline="true"
+        app:layout_constraintTop_toBottomOf="@id/txtShareTitle"
+        app:layout_constraintBottom_toTopOf="@id/btnChoosePhoto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- TATAMI BACKGROUND -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/tatami_purple"
+            android:scaleType="centerCrop"
+            android:contentDescription="@null" />
+
+        <!-- DARK OVERLAY -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#A8000010" />
+
+        <!-- CONTENT -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="12dp">
+
+            <!-- DATE -->
+            <TextView
+                android:id="@+id/txtShareDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2026-08-18 11:30"
+                android:textColor="#E0E0E8"
+                android:textSize="12sp"
+                android:gravity="end" />
+
+            <!-- FIGHT RESULT -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="FIGHT RESULT"
+                android:textColor="#D020FF"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginTop="2dp" />
+
+            <!-- DECORATIVE LINE -->
+
+
+            <!-- WINNER PHOTO -->
+            <ImageView
+                android:id="@+id/imgWinner"
+                android:layout_width="220dp"
+                android:layout_height="220dp"
+                android:layout_marginTop="4dp"
+                android:src="@android:drawable/ic_menu_camera"
+                android:scaleType="centerCrop"
+                android:background="#333344"
+                android:contentDescription="Winner photo" />
+
+            <!-- VICTORY -->
+            <TextView
+                android:id="@+id/txtWinnerLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🏆  VICTORY"
+                android:textColor="#FFD54F"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginTop="6dp" />
+
+            <!-- WINNER NAME -->
+            <TextView
+                android:id="@+id/txtShareWinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="AO"
+                android:textColor="#FFFFFF"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginTop="-2dp" />
+
+            <!-- SCORE -->
+            <TextView
+                android:id="@+id/txtShareScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0  -  8"
+                android:textColor="#FFFFFF"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginTop="-2dp" />
+
+            <!-- REASON -->
+            <TextView
+                android:id="@+id/txtShareReason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="WON BY WINNING GAP"
+                android:textColor="#E0E0E8"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginTop="-2dp" />
+
+            <!-- BOTTOM BRANDING -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="KARATE KUMITE"
+                android:textColor="#D020FF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginTop="5dp" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <!-- CHOOSE PHOTO BUTTON -->
+    <Button
+        android:id="@+id/btnChoosePhoto"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="CHOOSE WINNER PHOTO"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:backgroundTint="#6A1B9A"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@id/btnShare"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- SHARE BUTTON -->
+    <Button
+        android:id="@+id/btnShare"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="SHARE RESULT  ↗"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:backgroundTint="#A020F0"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "930254513831",
+    "project_id": "timerandfight",
+    "storage_bucket": "timerandfight.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:930254513831:android:2f63e8be97abc299d81d82",
+        "android_client_info": {
+          "package_name": "com.example.timerandfight"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRluC_ehS0pDGgo6wRiLZfarSDZZL3MC8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
