@@ -1,22 +1,31 @@
 package com.example.timerandfight;
 
-import android.content.Intent;
+import android.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.firestore.FirebaseFirestore;
+
 import java.util.ArrayList;
 
-public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryViewHolder> {
+public class HistoryAdapter
+        extends RecyclerView.Adapter<HistoryAdapter.HistoryViewHolder> {
 
     ArrayList<FightRecord> fightList;
 
+    FirebaseFirestore db;
+
     public HistoryAdapter(ArrayList<FightRecord> fightList) {
+
         this.fightList = fightList;
+
+        db = FirebaseFirestore.getInstance();
     }
 
     @NonNull
@@ -26,7 +35,11 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryV
             int viewType) {
 
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_fight_history, parent, false);
+                .inflate(
+                        R.layout.item_fight_history,
+                        parent,
+                        false
+                );
 
         return new HistoryViewHolder(view);
     }
@@ -51,7 +64,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryV
                 String.valueOf(record.akaScore)
         );
 
-        // Result information
+        // Result
         holder.txtWinner.setText(
                 "Winner: " + record.winner
         );
@@ -64,57 +77,105 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryV
                 record.dateTime
         );
 
-        // SHARE RESULT
-        holder.txtShareResult.setOnClickListener(v -> {
 
-            Intent intent = new Intent(
-                    v.getContext(),
-                    ShareResultActivity.class
+        // =====================================================
+        // DELETE FIGHT
+        // =====================================================
+
+        holder.txtDeleteFight.setOnClickListener(v -> {
+
+            AlertDialog.Builder builder =
+                    new AlertDialog.Builder(v.getContext());
+
+            builder.setTitle("Delete Fight");
+
+            builder.setMessage(
+                    "Are you sure you want to delete this fight history?"
             );
 
-            intent.putExtra(
-                    "aoName",
-                    record.aoName
+            builder.setPositiveButton(
+                    "Delete",
+                    (dialog, which) -> {
+
+                        deleteFight(
+                                record,
+                                holder.getBindingAdapterPosition(),
+                                holder
+                        );
+                    }
             );
 
-            intent.putExtra(
-                    "akaName",
-                    record.akaName
+            builder.setNegativeButton(
+                    "Cancel",
+                    (dialog, which) -> dialog.dismiss()
             );
 
-            intent.putExtra(
-                    "aoScore",
-                    record.aoScore
-            );
-
-            intent.putExtra(
-                    "akaScore",
-                    record.akaScore
-            );
-
-            intent.putExtra(
-                    "winner",
-                    record.winner
-            );
-
-            intent.putExtra(
-                    "reason",
-                    record.reason
-            );
-
-            intent.putExtra(
-                    "dateTime",
-                    record.dateTime
-            );
-
-            v.getContext().startActivity(intent);
+            builder.show();
         });
     }
 
+
+    private void deleteFight(
+            FightRecord record,
+            int position,
+            HistoryViewHolder holder) {
+
+        if (position == RecyclerView.NO_POSITION) {
+            return;
+        }
+
+        if (record.id == null ||
+                record.id.trim().isEmpty()) {
+
+            Toast.makeText(
+                    holder.itemView.getContext(),
+                    "Unable to find fight document",
+                    Toast.LENGTH_SHORT
+            ).show();
+
+            return;
+        }
+
+        db.collection("fights")
+                .document(record.id)
+                .delete()
+
+                .addOnSuccessListener(unused -> {
+
+                    fightList.remove(position);
+
+                    notifyItemRemoved(position);
+
+                    notifyItemRangeChanged(
+                            position,
+                            fightList.size()
+                    );
+
+                    Toast.makeText(
+                            holder.itemView.getContext(),
+                            "Fight deleted",
+                            Toast.LENGTH_SHORT
+                    ).show();
+                })
+
+                .addOnFailureListener(e -> {
+
+                    Toast.makeText(
+                            holder.itemView.getContext(),
+                            "Delete failed: "
+                                    + e.getMessage(),
+                            Toast.LENGTH_LONG
+                    ).show();
+                });
+    }
+
+
     @Override
     public int getItemCount() {
+
         return fightList.size();
     }
+
 
     public static class HistoryViewHolder
             extends RecyclerView.ViewHolder {
@@ -129,7 +190,8 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryV
         TextView txtReason;
         TextView txtDate;
 
-        TextView txtShareResult;
+        TextView txtDeleteFight;
+
 
         public HistoryViewHolder(
                 @NonNull View itemView) {
@@ -137,28 +199,44 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryV
             super(itemView);
 
             txtAoName =
-                    itemView.findViewById(R.id.txtAoName);
+                    itemView.findViewById(
+                            R.id.txtAoName
+                    );
 
             txtAkaName =
-                    itemView.findViewById(R.id.txtAkaName);
+                    itemView.findViewById(
+                            R.id.txtAkaName
+                    );
 
             txtAoScore =
-                    itemView.findViewById(R.id.txtAoScore);
+                    itemView.findViewById(
+                            R.id.txtAoScore
+                    );
 
             txtAkaScore =
-                    itemView.findViewById(R.id.txtAkaScore);
+                    itemView.findViewById(
+                            R.id.txtAkaScore
+                    );
 
             txtWinner =
-                    itemView.findViewById(R.id.txtWinner);
+                    itemView.findViewById(
+                            R.id.txtWinner
+                    );
 
             txtReason =
-                    itemView.findViewById(R.id.txtReason);
+                    itemView.findViewById(
+                            R.id.txtReason
+                    );
 
             txtDate =
-                    itemView.findViewById(R.id.txtDate);
+                    itemView.findViewById(
+                            R.id.txtDate
+                    );
 
-            txtShareResult =
-                    itemView.findViewById(R.id.txtShareResult);
+            txtDeleteFight =
+                    itemView.findViewById(
+                            R.id.txtDeleteFight
+                    );
         }
     }
 }

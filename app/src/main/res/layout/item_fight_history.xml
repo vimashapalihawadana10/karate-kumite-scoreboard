@@ -16,164 +16,182 @@
         android:background="#CC0D1022"
         android:padding="10dp">
 
+        <!-- DATE -->
         <TextView
             android:id="@+id/txtDate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="end"
             android:text="2026-07-05 10:30"
             android:textColor="#CFCFD8"
-            android:textSize="12sp"
-            android:gravity="end" />
+            android:textSize="12sp" />
 
+
+        <!-- FIGHTER SECTION -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="95dp"
-            android:orientation="horizontal"
+            android:layout_marginTop="6dp"
             android:gravity="center"
-            android:layout_marginTop="6dp">
+            android:orientation="horizontal">
 
             <!-- AKA CARD -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1.05"
-                android:orientation="vertical"
-                android:gravity="center"
                 android:background="#40ED2939"
+                android:gravity="center"
+                android:orientation="vertical"
                 android:padding="6dp">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
+                    android:gravity="center"
                     android:text="AKA"
                     android:textColor="#ED2939"
                     android:textSize="19sp"
-                    android:textStyle="bold"
-                    android:gravity="center" />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/txtAkaName"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
+                    android:gravity="center"
                     android:text="AKA Name"
                     android:textColor="#FFFFFF"
-                    android:textSize="14sp"
-                    android:gravity="center" />
+                    android:textSize="14sp" />
 
                 <TextView
                     android:id="@+id/txtAkaScore"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1.2"
+                    android:gravity="center"
                     android:text="0"
                     android:textColor="#FFFFFF"
                     android:textSize="23sp"
-                    android:textStyle="bold"
-                    android:gravity="center" />
+                    android:textStyle="bold" />
+
             </LinearLayout>
 
+
+            <!-- VS -->
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.45"
+                android:gravity="center"
                 android:text="VS"
                 android:textColor="#FFFFFF"
                 android:textSize="17sp"
-                android:textStyle="bold"
-                android:gravity="center" />
+                android:textStyle="bold" />
+
 
             <!-- AO CARD -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1.05"
-                android:orientation="vertical"
-                android:gravity="center"
                 android:background="#401E90FF"
+                android:gravity="center"
+                android:orientation="vertical"
                 android:padding="6dp">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
+                    android:gravity="center"
                     android:text="AO"
                     android:textColor="#1E90FF"
                     android:textSize="19sp"
-                    android:textStyle="bold"
-                    android:gravity="center" />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/txtAoName"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
+                    android:gravity="center"
                     android:text="AO Name"
                     android:textColor="#FFFFFF"
-                    android:textSize="14sp"
-                    android:gravity="center" />
+                    android:textSize="14sp" />
 
                 <TextView
                     android:id="@+id/txtAoScore"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1.2"
+                    android:gravity="center"
                     android:text="0"
                     android:textColor="#FFFFFF"
                     android:textSize="23sp"
-                    android:textStyle="bold"
-                    android:gravity="center" />
+                    android:textStyle="bold" />
+
             </LinearLayout>
 
         </LinearLayout>
 
+
+        <!-- WINNER -->
         <TextView
             android:id="@+id/txtWinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
             android:text="Winner: AO"
             android:textColor="#FFFFFF"
             android:textSize="16sp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:layout_marginTop="6dp" />
+            android:textStyle="bold" />
 
+
+        <!-- REASON -->
         <TextView
             android:id="@+id/txtReason"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:gravity="center"
             android:text="Reason: Winning Gap"
             android:textColor="#CFCFD8"
-            android:textSize="12sp"
-            android:gravity="center"
-            android:layout_marginTop="3dp" />
+            android:textSize="12sp" />
 
-        <TextView
-            android:id="@+id/txtViewReport"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="View Detailed Report  ›"
-            android:textColor="#A020F0"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:layout_marginTop="7dp" />
 
+        <!-- SHARE RESULT -->
         <TextView
             android:id="@+id/txtShareResult"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:padding="8dp"
             android:text="SHARE RESULT  ↗"
             android:textColor="#A020F0"
             android:textSize="14sp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:layout_marginTop="7dp"
-            android:padding="8dp"
-            android:clickable="true"
-            android:focusable="true" />
+            android:textStyle="bold" />
 
+
+        <!-- DELETE FIGHT HISTORY -->
+        <TextView
+            android:id="@+id/txtDeleteFight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="DELETE HISTORY"
+            android:textColor="#FF5252"
+            android:textSize="13sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 

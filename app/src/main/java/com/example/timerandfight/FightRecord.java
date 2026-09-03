@@ -1,7 +1,7 @@
 package com.example.timerandfight;
 
 public class FightRecord {
-
+    public String id;
     public String aoName;
     public String akaName;
     public int aoScore;
