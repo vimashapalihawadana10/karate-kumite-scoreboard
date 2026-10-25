@@ -208,54 +208,54 @@ The application helps manage match information from a mobile phone while allowin
 ### Welcome Screen
 The welcome screen introduces FightZone with its karate-themed design.
 
-![Welcome Screen](screenshots/WelcomeScreen.jpeg)
+<img src="screenshots/WelcomeScreen.jpeg" alt="Welcome Screen" width="250">
 
 ### Main Menu
 The main menu provides access to New Fight, Fight History, Live Display, and Settings.
 
-![Main Menu](screenshots/mainactivity.jpeg)
+<img src="screenshots/mainactivity.jpeg" alt="Main Menu" width="250">
 
 ### New Fight – Scoring Interface
 The scoring screen allows the referee to control the match timer, award points, and manage Senshu and warnings.
 
-![New Fight Scoring Interface](screenshots/score.jpeg)
+<img src="screenshots/score.jpeg" alt="New Fight Scoring Interface" width="250">
 
 ### Selecting a Winner
 The application helps manage match results and identify the winner.
 
-![Selecting Winner](screenshots/selectingwinner.jpeg)
+<img src="screenshots/selectingwinner.jpeg" alt="Selecting Winner" width="250">
 
 ### Fight History
 The fight history screen displays completed matches, scores, winners, and match details.
 
-![Fight History](screenshots/fighthistory.jpeg)
+<img src="screenshots/fighthistory.jpeg" alt="Fight History" width="250">
 
 ### Delete Fight History
 Users can delete saved fight records.
 
-![Delete Fight History](screenshots/deletehistory.jpeg)
+<img src="screenshots/deletehistory.jpeg" alt="Delete Fight History" width="250">
 
 ### Share Fight Results
 Users can share the results of completed matches.
 
-![Share Fight Results](screenshots/shareResults.jpeg)
+<img src="screenshots/shareResults.jpeg" alt="Share Fight Results" width="250">
 
 ### Live Display
 The live display screen provides options to open, share, or copy the online scoreboard link.
 
-![Live Display](screenshots/livedisplay.jpeg)
+<img src="screenshots/livedisplay.jpeg" alt="Live Display" width="250">
 
 ### Scoreboard Settings
 Users can customize the match countdown duration and winning point gap.
 
-![Settings](screenshots/settings.jpeg)
+<img src="screenshots/settings.jpeg" alt="Settings" width="250">
 
 ### Real-Time Web Scoreboard
 The web scoreboard displays current fight information and receives live updates from Firebase.
 
-![Web Scoreboard](screenshots/webscoreboard.png)
+<img src="screenshots/webscoreboard.png" alt="Web Scoreboard" width="600">
 
 ### Fight Result
 The application also provides a screen for viewing fight results.
 
-![Fight Result](screenshots/resultsPost.jpeg)
+<img src="screenshots/resultsPost.jpeg" alt="Fight Result" width="250">
