@@ -125,6 +125,10 @@ KumiteLiveScoreboard/
 
 The website is deployed through Firebase Hosting and can be opened using its hosted URL.
 
+**Website Source Code:** [View KumiteLiveScoreboard](KumiteLiveScoreboard/)
+
+**Live Scoreboard:** [Open FightZone Live Scoreboard](https://timerandfight.web.app)
+
 ## 7. Application Screenshots
 
 ### Welcome Screen
