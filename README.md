@@ -58,55 +58,7 @@ This project is designed to make karate practice matches easier to manage, impro
 | CSS | Style the scoreboard webpage |
 | JavaScript | Receive live updates and update the webpage |
 | SharedPreferences | Store timer and winning-gap settings |
-
-## 4. Project Structure
-
-The Android Studio project is organized as follows:
-
-```text
-TimerAndFight/
-│
-├── app/
-│   ├── src/
-│   │   ├── main/
-│   │   │   ├── java/
-│   │   │   │   └── com/example/timerandfight/
-│   │   │   │       ├── WelcomeScreen.java
-│   │   │   │       ├── MainActivity.java
-│   │   │   │       ├── NewFightActivity.java
-│   │   │   │       ├── HistoryActivity.java
-│   │   │   │       ├── HistoryAdapter.java
-│   │   │   │       ├── FightRecord.java
-│   │   │   │       ├── ShareResultActivity.java
-│   │   │   │       ├── LiveDisplayActivity.java
-│   │   │   │       └── SettingsActivity.java
-│   │   │   │
-│   │   │   ├── res/
-│   │   │   │   ├── drawable/
-│   │   │   │   ├── layout/
-│   │   │   │   └── mipmap-*/
-│   │   │   │
-│   │   │   └── AndroidManifest.xml
-│   │   │
-│   │   ├── androidTest/
-│   │   └── test/
-│   │
-│   ├── build.gradle.kts
-│   ├── google-services.json
-│   └── proguard-rules.pro
-│
-├── build.gradle.kts
-├── gradle.properties
-├── gradlew
-├── gradlew.bat
-├── local.properties
-├── settings.gradle.kts
-└── README.md
-```
-
-*Note: The structure above highlights the main files. Some folders and files may differ depending on the project configuration.*
-
-## 5. Firebase Integration
+## 4. Firebase Integration
 
 FightZone uses Firebase Cloud Firestore to store and synchronize fight information.
 
@@ -137,7 +89,7 @@ When the Android application updates the score or timer, the webpage receives th
 
 The Android application and webpage communicate through Firebase rather than connecting directly to each other.
 
-## 6. Application Workflow
+## 5. Application Workflow
 
 1. Launch FightZone.
 2. Tap **START FREE** to enter the main menu.
@@ -150,7 +102,7 @@ The Android application and webpage communicate through Firebase rather than con
 9. Open **Settings** to change the match duration and winning point gap.
 
 
-## 7. Live Scoreboard Website
+## 6. Live Scoreboard Website
 
 The web scoreboard is maintained in a separate folder named `KumiteLiveScoreboard`, rather than inside the Android project structure shown above.
 
@@ -173,7 +125,7 @@ KumiteLiveScoreboard/
 
 The website is deployed through Firebase Hosting and can be opened using its hosted URL.
 
-## 8. Application Screenshots
+## 7. Application Screenshots
 
 ### Welcome Screen
 The welcome screen introduces FightZone with its karate-themed design.
@@ -226,7 +178,7 @@ The web scoreboard displays current fight information and receives live updates 
 
 <img src="screenshots/webscoreboard.png" alt="Web Scoreboard" width="600">
 
-## 9. Advantages
+## 8. Advantages
 
 - Provides mobile-based control of karate practice matches.
 - Combines scoring, timer, warnings, Senshu, and fight history.
@@ -237,7 +189,7 @@ The web scoreboard displays current fight information and receives live updates 
 - Supports configurable match duration and winning point gap.
 - Can be used in university karate clubs, schools, training sessions, and practice tournaments.
 
-## 10. Conclusion
+## 9. Conclusion
 
 FightZone combines an Android scoring application with Firebase Cloud Firestore and a web-based scoreboard to provide a convenient solution for Karate Kumite practice matches.
 
