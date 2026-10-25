@@ -1,0 +1,592 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html,
+body {
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+            radial-gradient(
+                    circle at center,
+                    #202030,
+                    #050507 70%
+            );
+
+    color: white;
+}
+
+
+body {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+/* =====================================================
+   SCOREBOARD
+===================================================== */
+
+.scoreboard {
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.top-header {
+
+    height: 12vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding-left: 4vw;
+    padding-right: 4vw;
+
+    background: rgba(0, 0, 0, 0.7);
+
+    border-bottom: 2px solid #444;
+}
+
+
+.tournament-title {
+
+    font-size: 3vw;
+
+    font-weight: bold;
+
+    letter-spacing: 0.3vw;
+}
+
+
+.fight-status {
+
+    font-size: 1.7vw;
+
+    font-weight: bold;
+
+    padding: 0.7vw 1.5vw;
+
+    border-radius: 50px;
+}
+
+
+.fight-status.ready {
+
+    background: #555;
+}
+
+
+.fight-status.running {
+
+    background: #169c45;
+}
+
+
+.fight-status.paused {
+
+    background: #d38b00;
+}
+
+
+.fight-status.finished {
+
+    background: #9320c5;
+}
+
+
+/* =====================================================
+   MAIN AREA
+===================================================== */
+
+.main-score-area {
+
+    flex: 1;
+
+    display: grid;
+
+    grid-template-columns:
+            1fr
+            0.75fr
+            1fr;
+}
+
+
+/* =====================================================
+   FIGHTER SIDES
+===================================================== */
+
+.fighter-side {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 2vw;
+}
+
+
+.aka-side {
+
+    background:
+            linear-gradient(
+                    135deg,
+                    #5a0509,
+                    #c4111d
+            );
+
+    border-right: 4px solid rgba(255,255,255,0.15);
+}
+
+
+.ao-side {
+
+    background:
+            linear-gradient(
+                    225deg,
+                    #031d55,
+                    #086ad7
+            );
+
+    border-left: 4px solid rgba(255,255,255,0.15);
+}
+
+
+.fighter-label {
+
+    font-size: 2vw;
+
+    letter-spacing: 0.4vw;
+
+    font-weight: bold;
+
+    opacity: 0.8;
+}
+
+
+.fighter-name {
+
+    margin-top: 1vh;
+
+    font-size: 3.2vw;
+
+    font-weight: bold;
+
+    text-align: center;
+
+    min-height: 4vw;
+
+    max-width: 90%;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+}
+
+
+/* =====================================================
+   SCORE
+===================================================== */
+
+.score {
+
+    font-size: 14vw;
+
+    font-weight: 900;
+
+    line-height: 1;
+
+    margin-top: 2vh;
+
+    margin-bottom: 2vh;
+
+    text-shadow:
+            0 0 25px
+            rgba(255,255,255,0.25);
+}
+
+
+/* =====================================================
+   SENSHU
+===================================================== */
+
+.senshu {
+
+    font-size: 1.7vw;
+
+    font-weight: bold;
+
+    padding: 0.7vw 1.5vw;
+
+    border-radius: 40px;
+
+    border: 3px solid rgba(255,255,255,0.25);
+
+    opacity: 0.25;
+}
+
+
+.senshu.active {
+
+    opacity: 1;
+
+    color: #111;
+
+    background: #ffd500;
+
+    border-color: #ffd500;
+
+    box-shadow:
+            0 0 20px
+            rgba(255,213,0,0.7);
+}
+
+
+/* =====================================================
+   WARNING AREA
+===================================================== */
+
+.warning-title {
+
+    margin-top: 3vh;
+
+    margin-bottom: 1vh;
+
+    font-size: 1.1vw;
+
+    font-weight: bold;
+
+    opacity: 0.7;
+
+    letter-spacing: 0.15vw;
+}
+
+
+.warnings {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 0.6vw;
+}
+
+
+.warning {
+
+    width: 3.2vw;
+    height: 3.2vw;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: rgba(0,0,0,0.45);
+
+    border: 2px solid rgba(255,255,255,0.2);
+
+    border-radius: 8px;
+
+    font-size: 1.15vw;
+
+    font-weight: bold;
+
+    opacity: 0.35;
+}
+
+
+.warning.active {
+
+    color: black;
+
+    background: #ffd500;
+
+    border-color: white;
+
+    opacity: 1;
+
+    box-shadow:
+            0 0 15px
+            rgba(255,213,0,0.8);
+}
+
+
+.warning.danger-warning.active {
+
+    color: white;
+
+    background: #ff281e;
+
+    border-color: white;
+
+    box-shadow:
+            0 0 18px
+            rgba(255,0,0,0.8);
+}
+
+
+/* =====================================================
+   CENTER AREA
+===================================================== */
+
+.center-area {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+            linear-gradient(
+                    180deg,
+                    #17171c,
+                    #050507
+            );
+}
+
+
+.time-label {
+
+    font-size: 1.4vw;
+
+    letter-spacing: 0.3vw;
+
+    font-weight: bold;
+
+    color: #999;
+}
+
+
+.timer {
+
+    font-size: 8.5vw;
+
+    font-weight: bold;
+
+    margin-top: 2vh;
+
+    margin-bottom: 3vh;
+
+    font-family:
+            "Courier New",
+            monospace;
+
+    text-shadow:
+            0 0 25px
+            rgba(255,255,255,0.3);
+}
+
+
+.gap-container {
+
+    font-size: 1.2vw;
+
+    color: #aaa;
+
+    text-align: center;
+}
+
+
+.gap-container span {
+
+    display: block;
+
+    color: white;
+
+    font-size: 2.7vw;
+
+    font-weight: bold;
+
+    margin-top: 0.5vh;
+}
+
+
+/* =====================================================
+   CONNECTION STATUS
+===================================================== */
+
+.connection-status {
+
+    position: absolute;
+
+    bottom: 1.5vh;
+
+    font-size: 0.85vw;
+
+    color: #777;
+}
+
+
+.connection-status.connected {
+
+    color: #54ba6b;
+}
+
+
+.connection-status.error {
+
+    color: #ff5050;
+}
+
+
+/* =====================================================
+   WINNER OVERLAY
+===================================================== */
+
+.winner-overlay {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+            rgba(0, 0, 0, 0.93);
+
+    z-index: 1000;
+}
+
+
+.winner-overlay.show {
+
+    display: flex;
+}
+
+
+.winner-box {
+
+    text-align: center;
+
+    width: 80%;
+
+    padding: 5vh 5vw;
+
+    border-radius: 30px;
+
+    border: 3px solid #7728a8;
+
+    background:
+            linear-gradient(
+                    135deg,
+                    #141018,
+                    #201029
+            );
+
+    box-shadow:
+            0 0 60px
+            rgba(160,32,240,0.35);
+}
+
+
+.finished-text {
+
+    color: #aaa;
+
+    font-size: 2vw;
+
+    letter-spacing: 0.5vw;
+}
+
+
+.winner-text {
+
+    font-size: 7vw;
+
+    font-weight: 900;
+
+    margin-top: 3vh;
+
+    color: #d86cff;
+
+    text-shadow:
+            0 0 30px
+            rgba(160,32,240,0.8);
+}
+
+
+.winner-name {
+
+    margin-top: 1vh;
+
+    font-size: 3vw;
+
+    font-weight: bold;
+}
+
+
+.winner-reason {
+
+    margin-top: 3vh;
+
+    color: #bbb;
+
+    font-size: 1.8vw;
+}
+
+
+.final-score-title {
+
+    margin-top: 5vh;
+
+    color: #777;
+
+    font-size: 1vw;
+
+    letter-spacing: 0.3vw;
+}
+
+
+.final-score {
+
+    margin-top: 1vh;
+
+    font-size: 3.2vw;
+
+    font-weight: bold;
+}

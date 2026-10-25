@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Kumite Live Scoreboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+<div class="scoreboard">
+
+    <!-- ==================================================
+         TOP HEADER
+    ================================================== -->
+
+    <div class="top-header">
+
+        <div class="tournament-title">
+            KARATE KUMITE
+        </div>
+
+        <div id="fightStatus"
+             class="fight-status ready">
+
+            READY
+
+        </div>
+
+    </div>
+
+
+    <!-- ==================================================
+         MAIN SCORE AREA
+    ================================================== -->
+
+    <div class="main-score-area">
+
+
+        <!-- ==============================================
+             AKA SIDE
+        ============================================== -->
+
+        <div class="fighter-side aka-side">
+
+            <div class="fighter-label">
+                AKA
+            </div>
+
+            <div id="akaName"
+                 class="fighter-name">
+
+                AKA
+
+            </div>
+
+
+            <div id="akaScore"
+                 class="score">
+
+                0
+
+            </div>
+
+
+            <!-- Senshu -->
+
+            <div id="akaSenshu"
+                 class="senshu">
+
+                SENSHU
+
+            </div>
+
+
+            <!-- Warnings -->
+
+            <div class="warning-title">
+                WARNINGS
+            </div>
+
+
+            <div class="warnings">
+
+                <div id="akaC1"
+                     class="warning">
+
+                    C1
+
+                </div>
+
+
+                <div id="akaC2"
+                     class="warning">
+
+                    C2
+
+                </div>
+
+
+                <div id="akaC3"
+                     class="warning">
+
+                    C3
+
+                </div>
+
+
+                <div id="akaHC"
+                     class="warning">
+
+                    HC
+
+                </div>
+
+
+                <div id="akaH"
+                     class="warning danger-warning">
+
+                    H
+
+                </div>
+
+
+                <div id="akaK"
+                     class="warning danger-warning">
+
+                    K
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ==============================================
+             CENTER TIMER
+        ============================================== -->
+
+        <div class="center-area">
+
+            <div class="time-label">
+                TIME
+            </div>
+
+
+            <div id="timer"
+                 class="timer">
+
+                02:00
+
+            </div>
+
+
+            <div class="gap-container">
+
+                WINNING GAP
+
+                <span id="winningGap">
+                    6
+                </span>
+
+            </div>
+
+
+            <div id="connectionStatus"
+                 class="connection-status">
+
+                Connecting...
+
+            </div>
+
+        </div>
+
+
+        <!-- ==============================================
+             AO SIDE
+        ============================================== -->
+
+        <div class="fighter-side ao-side">
+
+            <div class="fighter-label">
+                AO
+            </div>
+
+
+            <div id="aoName"
+                 class="fighter-name">
+
+                AO
+
+            </div>
+
+
+            <div id="aoScore"
+                 class="score">
+
+                0
+
+            </div>
+
+
+            <!-- Senshu -->
+
+            <div id="aoSenshu"
+                 class="senshu">
+
+                SENSHU
+
+            </div>
+
+
+            <!-- Warnings -->
+
+            <div class="warning-title">
+                WARNINGS
+            </div>
+
+
+            <div class="warnings">
+
+                <div id="aoC1"
+                     class="warning">
+
+                    C1
+
+                </div>
+
+
+                <div id="aoC2"
+                     class="warning">
+
+                    C2
+
+                </div>
+
+
+                <div id="aoC3"
+                     class="warning">
+
+                    C3
+
+                </div>
+
+
+                <div id="aoHC"
+                     class="warning">
+
+                    HC
+
+                </div>
+
+
+                <div id="aoH"
+                     class="warning danger-warning">
+
+                    H
+
+                </div>
+
+
+                <div id="aoK"
+                     class="warning danger-warning">
+
+                    K
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+<!-- ======================================================
+     WINNER SCREEN
+====================================================== -->
+
+<div id="winnerOverlay"
+     class="winner-overlay">
+
+    <div class="winner-box">
+
+        <div class="finished-text">
+            FIGHT FINISHED
+        </div>
+
+
+        <div id="winnerText"
+             class="winner-text">
+
+            AO WINS
+
+        </div>
+
+
+        <div id="winnerName"
+             class="winner-name">
+
+        </div>
+
+
+        <div id="winnerReason"
+             class="winner-reason">
+
+        </div>
+
+
+        <div class="final-score-title">
+            FINAL SCORE
+        </div>
+
+
+        <div id="finalScore"
+             class="final-score">
+
+            AKA 0 - 0 AO
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script type="module"
+        src="app.js">
+</script>
+
+</body>
+
+</html>
