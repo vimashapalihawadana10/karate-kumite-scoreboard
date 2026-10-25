@@ -149,17 +149,8 @@ The Android application and webpage communicate through Firebase rather than con
 8. Open **Fight History** to review, share, or delete saved results.
 9. Open **Settings** to change the match duration and winning point gap.
 
-## 7. Running the Android Application
 
-1. Open the `TimerAndFight` project in Android Studio.
-2. Allow Gradle synchronization to complete.
-3. Ensure the Firebase configuration file is available.
-4. Connect an Android device or start an emulator.
-5. Run the application from Android Studio.
-
-A generated APK can also be installed on a compatible Android device.
-
-## 8. Live Scoreboard Website
+## 7. Live Scoreboard Website
 
 The web scoreboard is maintained in a separate folder named `KumiteLiveScoreboard`, rather than inside the Android project structure shown above.
 
@@ -182,28 +173,7 @@ KumiteLiveScoreboard/
 
 The website is deployed through Firebase Hosting and can be opened using its hosted URL.
 
-## 9. Advantages
-
-- Provides mobile-based control of karate practice matches.
-- Combines scoring, timer, warnings, Senshu, and fight history.
-- Supports a live scoreboard on a larger display.
-- Allows the referee to control the fight from a mobile phone.
-- Makes match information visible to competitors and spectators.
-- Stores completed results for later review.
-- Supports configurable match duration and winning point gap.
-- Can be used in university karate clubs, schools, training sessions, and practice tournaments.
-
-## 10. Conclusion
-
-FightZone combines an Android scoring application with Firebase Cloud Firestore and a web-based scoreboard to provide a convenient solution for Karate Kumite practice matches.
-
-The application helps manage match information from a mobile phone while allowing competitors and spectators to view live scores on a larger screen.
-
-**Project Name:** FightZone – Karate Kumite Scoreboard  
-**Platform:** Android and Web  
-**Academic Purpose:** University Mobile Application Development Project
-
-## 11. Application Screenshots
+## 8. Application Screenshots
 
 ### Welcome Screen
 The welcome screen introduces FightZone with its karate-themed design.
@@ -255,4 +225,25 @@ Users can customize the match countdown duration and winning point gap.
 The web scoreboard displays current fight information and receives live updates from Firebase.
 
 <img src="screenshots/webscoreboard.png" alt="Web Scoreboard" width="600">
+
+## 9. Advantages
+
+- Provides mobile-based control of karate practice matches.
+- Combines scoring, timer, warnings, Senshu, and fight history.
+- Supports a live scoreboard on a larger display.
+- Allows the referee to control the fight from a mobile phone.
+- Makes match information visible to competitors and spectators.
+- Stores completed results for later review.
+- Supports configurable match duration and winning point gap.
+- Can be used in university karate clubs, schools, training sessions, and practice tournaments.
+
+## 10. Conclusion
+
+FightZone combines an Android scoring application with Firebase Cloud Firestore and a web-based scoreboard to provide a convenient solution for Karate Kumite practice matches.
+
+The application helps manage match information from a mobile phone while allowing competitors and spectators to view live scores on a larger screen.
+
+**Project Name:** FightZone – Karate Kumite Scoreboard  
+**Platform:** Android and Web  
+**Academic Purpose:** University Mobile Application Development Project
 
