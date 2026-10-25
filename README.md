@@ -240,6 +240,7 @@ Users can share the results of completed matches.
 
 <img src="screenshots/shareResults.jpeg" alt="Share Fight Results" width="250">
 <img src="screenshots/resultsPost.jpeg" alt="Fight Result" width="250">
+
 ### Live Display
 The live display screen provides options to open, share, or copy the online scoreboard link.
 
