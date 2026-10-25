@@ -202,3 +202,60 @@ The application helps manage match information from a mobile phone while allowin
 **Project Name:** FightZone – Karate Kumite Scoreboard  
 **Platform:** Android and Web  
 **Academic Purpose:** University Mobile Application Development Project
+
+## 11. Application Screenshots
+
+### Welcome Screen
+The welcome screen introduces FightZone with its karate-themed design.
+
+![Welcome Screen](screenshots/WelcomeScreen.jpeg)
+
+### Main Menu
+The main menu provides access to New Fight, Fight History, Live Display, and Settings.
+
+![Main Menu](screenshots/mainactivity.jpeg)
+
+### New Fight – Scoring Interface
+The scoring screen allows the referee to control the match timer, award points, and manage Senshu and warnings.
+
+![New Fight Scoring Interface](screenshots/score.jpeg)
+
+### Selecting a Winner
+The application helps manage match results and identify the winner.
+
+![Selecting Winner](screenshots/selectingwinner.jpeg)
+
+### Fight History
+The fight history screen displays completed matches, scores, winners, and match details.
+
+![Fight History](screenshots/fighthistory.jpeg)
+
+### Delete Fight History
+Users can delete saved fight records.
+
+![Delete Fight History](screenshots/deletehistory.jpeg)
+
+### Share Fight Results
+Users can share the results of completed matches.
+
+![Share Fight Results](screenshots/shareResults.jpeg)
+
+### Live Display
+The live display screen provides options to open, share, or copy the online scoreboard link.
+
+![Live Display](screenshots/livedisplay.jpeg)
+
+### Scoreboard Settings
+Users can customize the match countdown duration and winning point gap.
+
+![Settings](screenshots/settings.jpeg)
+
+### Real-Time Web Scoreboard
+The web scoreboard displays current fight information and receives live updates from Firebase.
+
+![Web Scoreboard](screenshots/webscoreboard.png)
+
+### Fight Result
+The application also provides a screen for viewing fight results.
+
+![Fight Result](screenshots/resultsPost.jpeg)
