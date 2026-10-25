@@ -239,7 +239,7 @@ Users can delete saved fight records.
 Users can share the results of completed matches.
 
 <img src="screenshots/shareResults.jpeg" alt="Share Fight Results" width="250">
-
+<img src="screenshots/resultsPost.jpeg" alt="Fight Result" width="250">
 ### Live Display
 The live display screen provides options to open, share, or copy the online scoreboard link.
 
@@ -255,7 +255,3 @@ The web scoreboard displays current fight information and receives live updates 
 
 <img src="screenshots/webscoreboard.png" alt="Web Scoreboard" width="600">
 
-### Fight Result
-The application also provides a screen for viewing fight results.
-
-<img src="screenshots/resultsPost.jpeg" alt="Fight Result" width="250">
